@@ -1,6 +1,5 @@
 (ns puzzle-solutions.k-combinations)
 
-
 ;; Problem 103 - K-Combinations
 ;; http://www.4clojure.com/problem/103
 
