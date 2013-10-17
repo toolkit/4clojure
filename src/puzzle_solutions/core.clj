@@ -1,44 +1,6 @@
 (ns puzzle-solutions.core)
 
 
-;; Problem 150 - Palindromic Numbers
-(defn pals [n]
-  (let [to-d (fn [n] (map #(- (int %) 48) (str n)))
-        to-n (fn [d] (reduce #(+ (* 10 %) %2) 0 d))
-        half (fn [d] (take (/ (count d) 2) d))
-        reflect (fn [h d] (concat h (reverse (if (even? (count d)) h (butlast h)))))
-        next-p (fn [p]
-                 (let [d (to-d p)
-                       h (-> d half to-n inc to-d)]
-                   (if (apply = 9 d)
-                     (+ p 2)
-                     (to-n (reflect h d)))))
-        make-p (fn [n] (-> n to-d half to-n dec to-d (reflect (to-d n)) to-n))
-        first-p (fn [n] (if (zero? n) 0
-                          (first (drop-while #(< % n) (iterate next-p (make-p n))))))]
-    (iterate next-p (first-p n))))
-
-(take 26 (pals 1234550000))
-(take 26 (pals 0))
-(take 16 (pals 162))
-
-
-;; Problem 125 - Quines - TODO
-(str '(fn [] 2))
-((fn [] 2))
-
-(str '(fn [] "(fn []"))
-((fn [] "(fn []"))
-
-;;  Problem 171 - Intervals
-((fn [a]
-  (let [a (sort (set a))
-        mi (map-indexed #(vector % %2) a)
-        vs (vals (group-by #(apply - %) mi))
-        is (map #(vector (last (first %)) (last (last %))) vs)]
-  is)) [4 3 2 1 7 8 9])
-
-
 ;; Eulers Totient
 ((fn [x]
    (if (= 1 x) 1
