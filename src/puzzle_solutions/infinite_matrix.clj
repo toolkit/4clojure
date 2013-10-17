@@ -1,6 +1,5 @@
 (ns puzzle-solutions.infinite-matrix)
 
-
 ;; Problem 168 - Infinite Matrix
 ;; http://www.4clojure.com/problem/168
 
