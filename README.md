@@ -1,3 +1,3 @@
 # 4clojure-solutions
 
-Solutions to 4clojure puzzles
+**Spoiler Warning** This contains solutions to the 4clojure puzzles.
