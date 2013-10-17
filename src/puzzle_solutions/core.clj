@@ -34,29 +34,6 @@
 (def m ["_ _ _ # j o y"
         "_ _ o _ _ _ _"
         "_ _ f _ # _ _"])
-
-;; Problem 96 - Beauty is symmetry
-
-(defn t [[n l r]]
-  (let [m (fn m [[n l r]]
-            (vector n (if (coll? r) (m r) r) (if (coll? l) (m l) l)))]
-    (= l (m r))))
-
-
-(t [1 [2 nil [3 [4 [5 nil nil] [6 nil nil]] nil]]
-    [2 [3 nil [4 [6 nil nil] [5 nil nil]]] nil]])
-
-
-;; Problem 78 - Trampoline
-
-(letfn [(triple [x] #(sub-two (* 3 x)))
-        (sub-two [x] #(stop?(- x 2)))
-        (stop? [x] (if (> x 50) x #(triple x)))]
-  (#(loop [res (apply % %&)]
-      (if (fn? res)
-        (recur (res)) res)) triple 2))
-
-
 ;; Problem 84 - Transitive Closure
 
 (defn tc [pairs]
