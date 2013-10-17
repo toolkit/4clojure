@@ -1,6 +1,6 @@
 (ns puzzle-solutions.intervals)
 
-;;  Problem 171 - Intervals
+;; Problem 171 - Intervals
 ;; http://www.4clojure.com/problem/171
 
 ((fn [a]
