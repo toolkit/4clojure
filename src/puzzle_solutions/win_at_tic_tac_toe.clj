@@ -1,7 +1,7 @@
 (ns puzzle-solutions.win-at-tic-tac-toe)
 
-
 ;; Problem 119 - Win at Tic-Tac-Toe
+;; http://www.4clojure.com/problem/119
 
 (def puzzle [[:o :e :e]
              [:o :x :o]

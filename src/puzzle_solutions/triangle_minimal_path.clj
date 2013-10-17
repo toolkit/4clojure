@@ -1,6 +1,7 @@
 (ns puzzle-solutions.triangle-minimal-path)
 
 ;; Problem 79 - Triangle Minimal Path
+;; http://www.4clojure.com/problem/79
 
 (def x '([1]
         [2 4]
