@@ -29,5 +29,5 @@
 (is (= :straight (__ ["HA" "H2" "S3" "D4" "C5"])))
 (is (= :flush (__ ["HA" "HK" "H2" "H4" "HT"])))
 (is (= :full-house (__ ["HA" "DA" "CA" "HJ" "DJ"])))
-(is (= :full-house (__ ["HA" "DA" "CA" "HJ" "DJ"])))
-(is (= :full-house (__ ["HA" "DA" "CA" "HJ" "DJ"])))
+(is (= :four-of-a-kind (__ ["HA" "DA" "CA" "SA" "DJ"])))
+(is (= :straight-flush (__ ["HA" "HK" "HQ" "HJ" "HT"])))
