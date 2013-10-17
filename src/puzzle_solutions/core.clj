@@ -36,17 +36,6 @@
         "_ _ f _ # _ _"])
 
 
-
-
-;; Problem 85 - Powerset
-
-(defn powerset [s]
-  (reduce (fn [ps x]
-            (reduce (fn [ps s]
-                      (conj ps (conj s x))) ps ps)) #{#{}} s))
-
-(powerset #{1 2 3 4})
-
 ;; Problem 103 - K-Combinations
 
 ;; Totally insane way of calculcating combinations
