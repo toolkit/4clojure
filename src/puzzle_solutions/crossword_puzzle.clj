@@ -1,39 +1,39 @@
-(ns puzzle-solutions.crossword-puzzle)
+(ns puzzle-solutions.crossword-puzzle
+  (:require [clojure.test :refer [is]]))
 
 ;; TODO - Not yet solved.
 
 ;; Problem 111 - Crossword Puzzle
 ;; http://www.4clojure.com/problem/111
 
-(defn make-pattern [word]
-  (re-pattern
-   (apply str
-          (concat "(^|#)"
-                  (map #(str "(_|" % ")") word)
-                  "(#|$)"))))
+(def __ (fn [word matrix]
+          (let [remove-spaces      (fn [matrix]
+                                     (map #(clojure.string/replace % " " "") matrix))
+                transpose          (fn [matrix]
+                                     (apply map str matrix))
+                make-pattern       (fn [word]
+                                     (re-pattern
+                                      (apply str
+                                             (concat "(^|#)"
+                                                     (map #(str "(_|" % ")") word)
+                                                     "(#|$)"))))
+                matrix (remove-spaces matrix)
+                transposed (transpose matrix)
+                pattern (make-pattern word)]
+            (not (nil?
+                  (or (some #(re-find pattern %) matrix)
+                      (some #(re-find pattern %) transposed)))))))
 
-(def pat (make-pattern "clojure"))
-
-(map (re-find pat % ) )
-
-(print (re-find pat "_______"))
-
-(defn columns [matrix]
-  (partition 1 2 (apply map vector matrix)))
-
-(defn columns [matrix]
-  (apply map vector matrix))
-
-(print (columns ["a b c"
-                 "d e f"
-                 "g h i"]))
-
-
-(defn letters [line]
-  (partition 1 2 line))
-
-(print (letters "a b c d"))
-
-(def m ["_ _ _ # j o y"
-        "_ _ o _ _ _ _"
-        "_ _ f _ # _ _"])
+(is (= true  (__ "the" ["_ # _ _ e"])))
+(is (= false (__ "the" ["c _ _ _"
+                        "d _ # e"
+                        "r y _ _"])))
+(is (= true  (__ "joy" ["c _ _ _"
+                        "d _ # e"
+                        "r y _ _"])))
+(is (= false (__ "joy" ["c o n j"
+                        "_ _ y _"
+                        "r _ _ #"])))
+(is (= true  (__ "clojure" ["_ _ _ # j o y"
+                            "_ _ o _ _ _ _"
+                            "_ _ f _ # _ _"])))
