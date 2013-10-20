@@ -1,4 +1,4 @@
-(ns puzzle-solutions.layz-searching
+(ns puzzle-solutions.lazy-searching
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 108 - Lazy Searching
