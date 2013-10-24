@@ -1,7 +1,7 @@
 (ns puzzle-solutions.prime-sandwich
   (:require [clojure.test :refer [is]]))
 
-;; Problem 116 - Prime Sandwith
+;; Problem 116 - Prime Sandwich
 ;; http://www.4clojure.com/problem/116
 
 (def __
