@@ -1,5 +1,7 @@
 (ns puzzle-solutions.squares-squared)
 
+;; TO DO - Still to solve
+
 ;; Problem 138 - Squares Squared
 ;; http://www.4clojure.com/problem/138
 
