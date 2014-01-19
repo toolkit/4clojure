@@ -1,8 +1,6 @@
 (ns puzzle-solutions.crossword-puzzle
   (:require [clojure.test :refer [is]]))
 
-;; TODO - Not yet solved.
-
 ;; Problem 111 - Crossword Puzzle
 ;; http://www.4clojure.com/problem/111
 
