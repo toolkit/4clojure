@@ -9,5 +9,5 @@
 (is (contains? #{4 5 6} __))
 (is (contains? [1 1 1 1 1] __))
 (is (contains? {4 :a 2 :b} __))
-;; Looks like my versin of clojure does not support contains? on PersistenList
+;; Looks like my version of clojure does not support contains? on PersistenList
 ;; (is (not (contains? '(1 2 4) __)))
