@@ -6,7 +6,7 @@
 
 (def __ (fn [[s r]]
           {:suit ({\H :heart \D :diamond \C :club \S :spade} s)
-           :rank ((zipmap "23456789TJQKA" (range 13)) r)}))
+           :rank ((zipmap "23456789TJQKA" (range)) r)}))
 
 (is (= {:suit :diamond :rank 10} (__ "DQ")))
 (is (= {:suit :heart :rank 3} (__ "H5")))
