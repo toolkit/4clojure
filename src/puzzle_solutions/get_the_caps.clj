@@ -6,7 +6,6 @@
 
 (def __ #(apply str (re-seq  #"\p{Upper}" %)))
 
-
 (is (= (__ "HeLlO, WoRlD!") "HLOWRD"))
 (is (empty? (__ "nothing")))
 (is (= (__ "$#A(*&987Zf") "AZ"))
