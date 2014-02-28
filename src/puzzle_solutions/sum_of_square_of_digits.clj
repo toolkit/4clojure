@@ -2,7 +2,7 @@
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 120 - Sum of square of digits
-;; http://www.4clojure.com/problem/24
+;; http://www.4clojure.com/problem/120
 
 (def __ (fn [s]
           (count
