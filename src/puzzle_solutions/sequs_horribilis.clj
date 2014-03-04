@@ -1,12 +1,24 @@
 (ns puzzle-solutions.sequs-horribilis
   (:require [clojure.test :refer [is]]))
 
-;; TODO
-
 ;; Problem 112 - Sequs Horribilis
 ;; http://www.4clojure.com/problem/112
 
-(def __ (fn [] nil))
+(def __ (fn take-until [n vals]
+  (loop [values vals
+         current 0
+         accum []]
+    (if (empty? values)
+      accum
+      (let [v (first values)]
+        (if (coll? v)
+          (let [sub (take-until (- n current) v)]
+                (let [total (+ current (reduce + (flatten sub)))]
+                  (recur (rest values) total (conj accum sub))))
+          (let [total (+ current v)]
+                (if (> total n)
+                  accum
+                  (recur (rest values) total (conj accum v))))))))))
 
 (is (=  (__ 10 [1 2 [3 [4 5] 6] 7])
         '(1 2 (3 (4)))))
