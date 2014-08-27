@@ -1,6 +1,9 @@
 (ns puzzle-solutions.graph-connectivity
   (:require [clojure.test :refer [is]]))
 
+;; Problem 66 - Graph Connectivity
+;; http://www.4clojure.com/problem/91
+
 (def __ (fn [edges]
           (let [both-directions (fn [edges]
                                   (into edges (map reverse edges)))
