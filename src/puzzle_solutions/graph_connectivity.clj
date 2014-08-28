@@ -7,19 +7,16 @@
 (def __ (fn [edges]
           (let [both-directions (fn [edges]
                                   (into edges (map reverse edges)))
-                neighbours (fn [edges]
-                             (into {} (map (fn [[k v]] [k (map second v)]) (group-by first (both-directions edges)))))
-
-                complete-helper (fn [nedges visited]
-                                  (let [neigbours-to-visited (set (mapcat second (select-keys nedges visited)))]
-                                    (if (or (empty? nedges) (empty? neigbours-to-visited))
-                                      visited
-                                      (recur (apply dissoc nedges visited)
-                                             (apply conj visited neigbours-to-visited)))))
-                nedges (neighbours edges)]
-            (let [[node _] (first nedges)]
-              (= (set (keys nedges))
-                 (complete-helper nedges #{node}))))))
+                complete (fn [node-neighbours visited]
+                           (let [visit-next (set (mapcat second (select-keys node-neighbours visited)))]
+                             (if (or (empty? node-neighbours) (empty? visit-next))
+                               visited
+                               (recur (apply dissoc node-neighbours visited)
+                                      (into visited visit-next)))))
+                node-neighbours (into {} (map (fn [[k v]] [k (map second v)]) (group-by first (both-directions edges))))]
+            (let [[start-node _] (first node-neighbours)]
+              (= (set (keys node-neighbours))
+                 (complete node-neighbours #{start-node}))))))
 
 (is (= true (__ #{[:a :a]})))
 (is (= true (__ #{[:a :b]})))
