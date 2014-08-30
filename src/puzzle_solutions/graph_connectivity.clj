@@ -6,15 +6,12 @@
 
 (def __ (fn connected? [edges]
           (let [sets (set (map set edges))
-                total (count (set (mapcat identity sets)))
+                nodes (set (mapcat identity sets))
                 grow (fn [nodes]
                        (set (mapcat identity (for [n nodes s sets :when (contains? s n)] s))))
-                connected (loop [nodes #{(ffirst sets)}]
-                            (let [new-nodes (grow nodes)]
-                              (if (= new-nodes nodes)
-                                nodes
-                                (recur new-nodes))))]
-            (= total (count connected)))))
+                connected (loop [prev #{(first nodes)} next (grow prev)]
+                            (if (= prev next) prev (recur next (grow next))))]
+            (= nodes connected))))
 
 (is (= true (__ #{[:a :a]})))
 (is (= true (__ #{[:a :b]})))
