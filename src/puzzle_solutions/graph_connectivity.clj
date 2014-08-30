@@ -4,19 +4,17 @@
 ;; Problem 91 - Graph Connectivity
 ;; http://www.4clojure.com/problem/91
 
-(def __ (fn [edges]
-          (let [both-directions (fn [edges]
-                                  (into edges (map reverse edges)))
-                complete (fn [node-neighbours visited]
-                           (let [visit-next (set (mapcat second (select-keys node-neighbours visited)))]
-                             (if (or (empty? node-neighbours) (empty? visit-next))
-                               visited
-                               (recur (apply dissoc node-neighbours visited)
-                                      (into visited visit-next)))))
-                node-neighbours (into {} (map (fn [[k v]] [k (map second v)]) (group-by first (both-directions edges))))]
-            (let [[start-node _] (first node-neighbours)]
-              (= (set (keys node-neighbours))
-                 (complete node-neighbours #{start-node}))))))
+(def __ (fn connected? [edges]
+          (let [sets (set (map set edges))
+                total (count (set (mapcat identity sets)))
+                grow (fn [nodes]
+                       (set (mapcat identity (for [n nodes s sets :when (contains? s n)] s))))
+                connected (loop [nodes #{(ffirst sets)}]
+                            (let [new-nodes (grow nodes)]
+                              (if (= new-nodes nodes)
+                                nodes
+                                (recur new-nodes))))]
+            (= total (count connected)))))
 
 (is (= true (__ #{[:a :a]})))
 (is (= true (__ #{[:a :b]})))
