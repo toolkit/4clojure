@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/toolkit/4clojure-solutions.svg?branch=master)]
+[![Build Status](https://travis-ci.org/toolkit/4clojure-solutions.svg?branch=master)](https://travis-ci.org/toolkit/4clojure-solutions)
 
 # 4clojure-solutions
 
