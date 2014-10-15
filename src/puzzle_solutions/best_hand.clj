@@ -6,10 +6,10 @@
 
 (def __ (fn [cards]
   (let [flush? (apply = (map first cards))
-        ranks (map (zipmap "23456789TJQKA" (range 13)) (map last cards))
+        ranks (map (zipmap "23456789TJQKA" (range 2 15)) (map last cards))
         freqs (frequencies (vals (frequencies ranks)))
         run? #(= (range (first %) (inc (last %))) %)
-        straight? (or (run? (sort ranks)) (run? (sort (replace {12 -1} ranks))))]
+        straight? (or (run? (sort ranks)) (run? (sort (replace {14 1} ranks))))]
     (cond
       (and straight? flush?)  :straight-flush
       (= {4 1 1 1} freqs)     :four-of-a-kind
