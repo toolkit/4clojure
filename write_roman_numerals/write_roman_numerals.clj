@@ -1,5 +1,5 @@
 (ns write-roman-numerals
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 104 - Write Roman Numerals
 ;; http://www.4clojure.com/problem/104
@@ -19,10 +19,11 @@
                     (recur (rest values) current accum)
                     (recur values next (conj accum (roman v))))))))))
 
-(is (= "I" (__ 1)))
-(is (= "XXX" (__ 30)))
-(is (= "IV" (__ 4)))
-(is (= "CXL" (__ 140)))
-(is (= "DCCCXXVII" (__ 827)))
-(is (= "MMMCMXCIX" (__ 3999)))
-(is (= "XLVIII" (__ 48)))
+(deftest tests
+  (is (= "I" (__ 1)))
+  (is (= "XXX" (__ 30)))
+  (is (= "IV" (__ 4)))
+  (is (= "CXL" (__ 140)))
+  (is (= "DCCCXXVII" (__ 827)))
+  (is (= "MMMCMXCIX" (__ 3999)))
+  (is (= "XLVIII" (__ 48))))

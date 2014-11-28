@@ -1,5 +1,5 @@
 (ns anagram-finder
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 77 - Anagram Finder
 ;; http://www.4clojure.com/problem/77
@@ -9,8 +9,9 @@
       (remove (comp #{1} count val)
         (group-by sort %)))))
 
-(is (= (__ ["meat" "mat" "team" "mate" "eat"])
-       #{#{"meat" "team" "mate"}}))
+(deftest tests
+  (is (= (__ ["meat" "mat" "team" "mate" "eat"])
+         #{#{"meat" "team" "mate"}}))
 
-(is (= (__ ["veer" "lake" "item" "kale" "mite" "ever"])
-   #{#{"veer" "ever"} #{"lake" "kale"} #{"mite" "item"}}))
+  (is (= (__ ["veer" "lake" "item" "kale" "mite" "ever"])
+         #{#{"veer" "ever"} #{"lake" "kale"} #{"mite" "item"}})))

@@ -1,16 +1,29 @@
-(ns a-half-truth
-  (:require [clojure.test :refer [is]]))
+(ns analyze-reversi
+  (:require [clojure.test :refer :all]))
 
-;; Problem 83 - A Half-Truth
-;; http://www.4clojure.com/problem/83
+;; Problem 124 - Analyze reversi
+;; http://www.4clojure.com/problem/124
 
-(def __ #(and
-  (not-every? true? %&)
-  (not-every? false? %&)))
+(def __ (fn [x] nil))
 
-(is (= false (__ false false)))
-(is (= true (__ true false)))
-(is (= false (__ true)))
-(is (= true (__ false true false)))
-(is (= false (__ true true true)))
-(is (= true (__ true true true false)))
+(deftests tests
+  (is  (= {[1 3] #{[1 2]}, [0 2] #{[1 2]}, [3 1] #{[2 1]}, [2 0] #{[2 1]}}
+          (__ '[[e e e e]
+                [e w b e]
+                [e b w e]
+                [e e e e]] 'w)))
+  (is (= {[3 2] #{[2 2]}, [3 0] #{[2 1]}, [1 0] #{[1 1]}}
+         (__ '[[e e e e]
+               [e w b e]
+               [w w w e]
+               [e e e e]] 'b)))
+  (is (= {[0 3] #{[1 2]}, [1 3] #{[1 2]}, [3 3] #{[2 2]}, [2 3] #{[2 2]}}
+         (__ '[[e e e e]
+               [e w b e]
+               [w w b e]
+               [e e b e]] 'w)))
+  (is (= {[0 3] #{[2 1] [1 2]}, [1 3] #{[1 2]}, [2 3] #{[2 1] [2 2]}}
+         (__ '[[e e w e]
+               [b b w e]
+               [b w w e]
+               [b w w w]] 'b))))

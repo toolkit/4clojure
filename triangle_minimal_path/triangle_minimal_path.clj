@@ -1,5 +1,5 @@
 (ns triangle-minimal-path
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 79 - Triangle Minimal Path
 ;; http://www.4clojure.com/problem/79
@@ -26,14 +26,15 @@
                     tri path)))
          (paths (count tri))))))))
 
-(is (= 7 (__ '([1]
-              [2 4]
-             [5 1 4]
-            [2 3 4 5]))))
+(deftest tests
+  (is (= 7 (__ '([1]
+                   [2 4]
+                     [5 1 4]
+                       [2 3 4 5]))))
 
-(is (= 20 (__ '([3]
-               [2 4]
-              [1 9 3]
-             [9 9 2 4]
-            [4 6 6 7 8]
-           [5 7 3 5 1 4]))))
+  (is (= 20 (__ '([3]
+                    [2 4]
+                      [1 9 3]
+                        [9 9 2 4]
+                          [4 6 6 7 8]
+                            [5 7 3 5 1 4])))))

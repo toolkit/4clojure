@@ -1,5 +1,5 @@
 (ns analyze-a-tic-tac-toe-board
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 73 - Analyze a Tic-Tac-Toe Board
 ;; http://www.4clojure.com/problem/73
@@ -15,37 +15,38 @@
       (win :x) :x
       (win :o) :o))))
 
-(is
- (= nil (__ [[:e :e :e]
-             [:e :e :e]
-             [:e :e :e]])))
+(deftest tests
+  (is
+   (= nil (__ [[:e :e :e]
+               [:e :e :e]
+               [:e :e :e]])))
 
-(is
- (= :x (__ [[:x :e :o]
-            [:x :e :e]
-            [:x :e :o]])))
+  (is
+   (= :x (__ [[:x :e :o]
+              [:x :e :e]
+              [:x :e :o]])))
 
-(is
- (= :o (__ [[:e :x :e]
-            [:o :o :o]
-            [:x :e :x]])))
+  (is
+   (= :o (__ [[:e :x :e]
+              [:o :o :o]
+              [:x :e :x]])))
 
-(is
- (= nil (__ [[:x :e :o]
-             [:x :x :e]
-             [:o :x :o]])))
+  (is
+   (= nil (__ [[:x :e :o]
+               [:x :x :e]
+               [:o :x :o]])))
 
-(is
- (= :x (__ [[:x :e :e]
-            [:o :x :e]
-            [:o :e :x]])))
+  (is
+   (= :x (__ [[:x :e :e]
+              [:o :x :e]
+              [:o :e :x]])))
 
-(is
- (= :o (__ [[:x :e :o]
-            [:x :o :e]
-            [:o :e :x]])))
+  (is
+   (= :o (__ [[:x :e :o]
+              [:x :o :e]
+              [:o :e :x]])))
 
-(is
- (= nil (__ [[:x :o :x]
-             [:x :o :x]
-             [:o :x :o]])))
+  (is
+   (= nil (__ [[:x :o :x]
+               [:x :o :x]
+               [:o :x :o]]))))
