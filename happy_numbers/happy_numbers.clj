@@ -1,5 +1,5 @@
 (ns happy-numbers
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 86 - Happy numbers
 ;; http://www.4clojure.com/problem/86
@@ -13,7 +13,8 @@
                (= 1 z) true
                :else (recur (sumsq z) (conj seen z)))))))
 
-(is (= (__ 7) true))
-(is (= (__ 986543210) true))
-(is (= (__ 2) false))
-(is (= (__ 3) false))
+(deftest tests
+  (is (= (__ 7) true))
+  (is (= (__ 986543210) true))
+  (is (= (__ 2) false))
+  (is (= (__ 3) false)))

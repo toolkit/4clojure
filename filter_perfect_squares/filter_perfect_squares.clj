@@ -1,5 +1,5 @@
 (ns filter-perfect-squares
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 74 - Filter Perfect Squares
 ;; http://www.4clojure.com/problem/74
@@ -11,5 +11,6 @@
                                        (= % (* l l)))
                                     (map #(read-string %) (.split s ",")))))))
 
-(is (= (__ "4,5,6,7,8,9") "4,9"))
-(is (= (__ "15,16,25,36,37") "16,25,36"))
+(deftest tests
+  (is (= (__ "4,5,6,7,8,9") "4,9"))
+  (is (= (__ "15,16,25,36,37") "16,25,36")))

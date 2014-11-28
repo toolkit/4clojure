@@ -1,5 +1,5 @@
 (ns identify-keys-and-values
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 105 - Identify Keys and Values
 ;; http://www.4clojure.com/problem/105
@@ -11,7 +11,8 @@
                        (assoc accum :seen item item [])
                        (update-in accum [(:seen accum)] #(conj % item)))) {} coll) :seen)))
 
-(is (= {} (__ [])))
-(is (= {:a [1]} (__ [:a 1])))
-(is (= {:a [1], :b [2]} (__ [:a 1, :b 2])))
-(is (= {:a [1 2 3], :b [], :c [4]} (__ [:a 1 2 3 :b :c 4])))
+(deftest tests
+  (is (= {} (__ [])))
+  (is (= {:a [1]} (__ [:a 1])))
+  (is (= {:a [1], :b [2]} (__ [:a 1, :b 2])))
+  (is (= {:a [1 2 3], :b [], :c [4]} (__ [:a 1 2 3 :b :c 4]))))

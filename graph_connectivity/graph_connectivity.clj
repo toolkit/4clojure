@@ -1,5 +1,5 @@
 (ns graph-connectivity
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 91 - Graph Connectivity
 ;; http://www.4clojure.com/problem/91
@@ -13,13 +13,14 @@
                             (if (= prev next) prev (recur next (grow next))))]
             (= nodes connected))))
 
-(is (= true (__ #{[:a :a]})))
-(is (= true (__ #{[:a :b]})))
-(is (= false (__ #{[1 2] [2 3] [3 1]
-                   [4 5] [5 6] [6 4]})))
-(is (= true (__ #{[1 2] [2 3] [3 1]
-                  [4 5] [5 6] [6 4] [3 4]})))
-(is (= false (__ #{[:a :b] [:b :c] [:c :d]
-                   [:x :y] [:d :a] [:b :e]})))
-(is (= true (__ #{[:a :b] [:b :c] [:c :d]
-                  [:x :y] [:d :a] [:b :e] [:x :a]})))
+(deftest tests
+  (is (= true (__ #{[:a :a]})))
+  (is (= true (__ #{[:a :b]})))
+  (is (= false (__ #{[1 2] [2 3] [3 1]
+                     [4 5] [5 6] [6 4]})))
+  (is (= true (__ #{[1 2] [2 3] [3 1]
+                    [4 5] [5 6] [6 4] [3 4]})))
+  (is (= false (__ #{[:a :b] [:b :c] [:c :d]
+                     [:x :y] [:d :a] [:b :e]})))
+  (is (= true (__ #{[:a :b] [:b :c] [:c :d]
+                    [:x :y] [:d :a] [:b :e] [:x :a]}))))
