@@ -1,4 +1,4 @@
-(ns puzzle-solutions.double-down
+(ns double-down
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 15 - Double Down

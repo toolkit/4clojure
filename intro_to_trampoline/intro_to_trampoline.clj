@@ -1,4 +1,4 @@
-(ns puzzle-solutions.intro-to-trampoline
+(ns intro-to-trampoline
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 76 - Intro to Trampoline

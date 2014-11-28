@@ -1,4 +1,4 @@
-(ns puzzle-solutions.simple-recursion
+(ns simple-recursion
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 57 - Simple Recursion

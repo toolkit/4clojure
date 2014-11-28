@@ -1,4 +1,4 @@
-(ns puzzle-solutions.tricky-card-games
+(ns tricky-card-games
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 141 - Tricky Card Games

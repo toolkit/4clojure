@@ -1,4 +1,4 @@
-(ns puzzle-solutions.merge-with-a-function
+(ns merge-with-a-function
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 69 - Merge With A Function

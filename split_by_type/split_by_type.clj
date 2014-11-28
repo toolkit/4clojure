@@ -1,4 +1,4 @@
-(ns puzzle-solutions.split-by-type
+(ns split-by-type
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 50 - Split by Type

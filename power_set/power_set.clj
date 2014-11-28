@@ -1,4 +1,4 @@
-(ns puzzle-solutions.power-set
+(ns power-set
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 85 - Power Set

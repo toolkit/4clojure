@@ -1,4 +1,4 @@
-(ns puzzle-solutions.interpose-a-seq
+(ns interpose-a-seq
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 40 - Interpose a Seq

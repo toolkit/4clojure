@@ -1,4 +1,4 @@
-(ns puzzle-solutions.reverse-interleave
+(ns reverse-interleave
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 43 - Reverse Interleave

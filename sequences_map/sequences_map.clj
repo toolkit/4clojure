@@ -1,4 +1,4 @@
-(ns puzzle-solutions.sequences-map
+(ns sequences-map
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 17 - Sequences: Map

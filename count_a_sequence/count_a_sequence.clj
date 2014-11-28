@@ -1,4 +1,4 @@
-(ns puzzle-solutions.count-a-sequence
+(ns count-a-sequence
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 22 - Count a Sequence

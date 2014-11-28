@@ -1,4 +1,4 @@
-(ns puzzle-solutions.intro-to-strings
+(ns intro-to-strings
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 3 - Intro to Strings

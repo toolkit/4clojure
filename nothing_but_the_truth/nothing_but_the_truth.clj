@@ -1,4 +1,4 @@
-(ns puzzle-solutions.nothing-but-the-truth
+(ns nothing-but-the-truth
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 1 - Nothing but the truth

@@ -1,4 +1,4 @@
-(ns puzzle-solutions.universal-computation-engine
+(ns universal-computation-engine
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 121 - Universal Computation Engine

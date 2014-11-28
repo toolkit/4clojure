@@ -1,4 +1,4 @@
-(ns puzzle-solutions.nth-element
+(ns nth-element
    (:require [clojure.test :refer [is]]))
 
 ;; Problem 21 - Nth Element

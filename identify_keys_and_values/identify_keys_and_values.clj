@@ -1,4 +1,4 @@
-(ns puzzle-solutions.identify-keys-and-values
+(ns identify-keys-and-values
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 105 - Identify Keys and Values

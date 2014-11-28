@@ -1,4 +1,4 @@
-(ns puzzle-solutions.beauty-is-symmetry
+(ns beauty-is-symmetry
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 96 - Beauty is symmetry

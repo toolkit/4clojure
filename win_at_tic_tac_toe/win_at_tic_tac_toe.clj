@@ -1,4 +1,4 @@
-(ns puzzle-solutions.win-at-tic-tac-toe
+(ns win-at-tic-tac-toe
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 119 - Win at Tic-Tac-Toe

@@ -1,4 +1,4 @@
-(ns puzzle-solutions.a-half-truth
+(ns a-half-truth
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 83 - A Half-Truth

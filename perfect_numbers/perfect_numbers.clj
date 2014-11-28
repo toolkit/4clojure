@@ -1,4 +1,4 @@
-(ns puzzle-solutions.perfect-numbers
+(ns perfect-numbers
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 80 - Perfect Numbers

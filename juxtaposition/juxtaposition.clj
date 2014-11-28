@@ -1,4 +1,4 @@
-(ns puzzle-solutions.juxtaposition
+(ns juxtaposition
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 59 - Juxtaposition

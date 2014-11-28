@@ -1,4 +1,4 @@
-(ns puzzle-solutions.to-tree-or-not-to-tree
+(ns to-tree-or-not-to-tree
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 95 - To Tree, or not to Tree

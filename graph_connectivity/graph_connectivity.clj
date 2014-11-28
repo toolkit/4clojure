@@ -1,4 +1,4 @@
-(ns puzzle-solutions.graph-connectivity
+(ns graph-connectivity
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 91 - Graph Connectivity

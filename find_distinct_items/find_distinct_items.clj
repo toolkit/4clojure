@@ -1,4 +1,4 @@
-(ns puzzle-solutions.find-distinct-items
+(ns find-distinct-items
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 56 - Find Distinct Items

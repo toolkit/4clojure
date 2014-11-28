@@ -1,4 +1,4 @@
-(ns puzzle-solutions.making-data-dance
+(ns making-data-dance
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 113 - Making Data Dance

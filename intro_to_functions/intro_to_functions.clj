@@ -1,4 +1,4 @@
-(ns puzzle-solutions.intro-to-functions
+(ns intro-to-functions
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 14 - Intro to Functions

@@ -1,4 +1,4 @@
-(ns puzzle-solutions.logical-falsity-and-truth
+(ns logical-falsity-and-truth
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 162 - Logical Falsity and Truth

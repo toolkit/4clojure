@@ -1,4 +1,4 @@
-(ns puzzle-solutions.sequences-rest
+(ns sequences-rest
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 13 - Sequences: Rest

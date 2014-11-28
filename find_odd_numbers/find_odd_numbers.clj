@@ -1,4 +1,4 @@
-(ns puzzle-solutions.find-odd-numbers
+(ns find-odd-numbers
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 25 - Find the odd numbers

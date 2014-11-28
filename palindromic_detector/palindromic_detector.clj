@@ -1,4 +1,4 @@
-(ns puzzle-solutions.palindromic-detector
+(ns palindromic-detector
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 27 - Palindromic Detector

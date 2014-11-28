@@ -1,4 +1,4 @@
-(ns puzzle-solutions.penultimate-element
+(ns penultimate-element
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 20 - Penultimate Element

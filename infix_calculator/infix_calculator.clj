@@ -1,4 +1,4 @@
-(ns puzzle-solutions.infix-calculator
+(ns infix-calculator
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 135 - Infix Calculator

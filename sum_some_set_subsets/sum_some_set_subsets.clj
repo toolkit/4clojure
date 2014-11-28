@@ -1,4 +1,4 @@
-(ns  puzzle-solutions.sum-some-set-subsets
+(ns  sum-some-set-subsets
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 131 - Sum some set subsets

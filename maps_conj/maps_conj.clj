@@ -1,4 +1,4 @@
-(ns puzzle-solutions.maps-conj
+(ns maps-conj
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 11 - Maps Conj

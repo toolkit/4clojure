@@ -1,4 +1,4 @@
-(ns puzzle-solutions.contain-yourself
+(ns contain-yourself
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 47 - Contain Yourself

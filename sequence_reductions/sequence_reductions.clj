@@ -1,4 +1,4 @@
-(ns puzzle-solutions.sequence-reductions
+(ns sequence-reductions
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 60 - Sequence Reductions

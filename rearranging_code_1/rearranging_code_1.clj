@@ -1,4 +1,4 @@
-(ns puzzle-solutions.rearranging-code-1
+(ns rearranging-code-1
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 71 - Rearranging Code: ->

@@ -1,4 +1,4 @@
-(ns puzzle-solutions.re-implement-map
+(ns re-implement-map
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 118 - Re-implement map

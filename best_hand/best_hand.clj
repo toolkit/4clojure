@@ -1,4 +1,4 @@
-(ns puzzle-solutions.best-hand
+(ns best-hand
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 178 - Best Hand **

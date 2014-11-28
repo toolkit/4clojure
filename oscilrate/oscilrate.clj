@@ -1,4 +1,4 @@
-(ns puzzle-solutions.oscilrate
+(ns oscilrate
    (:require [clojure.test :refer [is]]))
 
 ;; Problem 144 - Oscilrate

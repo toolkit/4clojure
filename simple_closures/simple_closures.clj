@@ -1,4 +1,4 @@
-(ns puzzle-solutions.simple-closures
+(ns simple-closures
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 107 - Simple Closures

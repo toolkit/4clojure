@@ -1,4 +1,4 @@
-(ns puzzle-solutions.sequences-filter
+(ns sequences-filter
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 18 - Sequences: Filter

@@ -1,4 +1,4 @@
-(ns puzzle-solutions.partially-flatten-a-sequence
+(ns partially-flatten-a-sequence
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 93 - Partially Flatten a Sequence

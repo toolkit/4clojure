@@ -1,4 +1,4 @@
-(ns puzzle-solutions.a-nil-key
+(ns a-nil-key
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 134 - A nil key

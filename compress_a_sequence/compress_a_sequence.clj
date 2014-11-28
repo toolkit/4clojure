@@ -1,4 +1,4 @@
-(ns puzzle-solutions.compress-a-sequence
+(ns compress-a-sequence
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 30 - Compress A Sequence

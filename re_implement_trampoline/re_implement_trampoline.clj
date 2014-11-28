@@ -1,4 +1,4 @@
-(ns puzzle-solutions.re-implement-trampoline
+(ns re-implement-trampoline
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 78 - Reimplement Trampoline

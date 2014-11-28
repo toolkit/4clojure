@@ -1,4 +1,4 @@
-(ns puzzle-solutions.get-the-caps
+(ns get-the-caps
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 29 - Get the Caps

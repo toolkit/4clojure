@@ -1,4 +1,4 @@
-(ns puzzle-solutions.generating-k-combinations
+(ns generating-k-combinations
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 103 - K-Combinations

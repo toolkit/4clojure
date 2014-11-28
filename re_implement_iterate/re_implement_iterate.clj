@@ -1,4 +1,4 @@
-(ns puzzle-solutions.re-implement-iterate
+(ns re-implement-iterate
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 62 - Re-implement iterate

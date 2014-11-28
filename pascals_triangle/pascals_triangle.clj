@@ -1,4 +1,4 @@
-(ns puzzle-solutions.pascals-triangle
+(ns pascals-triangle
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 97 - Pascal's Traiangle

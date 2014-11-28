@@ -1,4 +1,4 @@
-(ns puzzle-solutions.pascals-trapezoid
+(ns pascals-trapezoid
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 147 - Pascal's Trapezoid

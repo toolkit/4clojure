@@ -1,4 +1,4 @@
-(ns puzzle-solutions.prime-sandwich
+(ns prime-sandwich
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 116 - Prime Sandwich

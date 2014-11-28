@@ -1,4 +1,4 @@
-(ns puzzle-solutions.flatten-a-sequence
+(ns flatten-a-sequence
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 28 - Flatten a Sequence

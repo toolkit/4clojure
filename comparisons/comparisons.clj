@@ -1,4 +1,4 @@
-(ns puzzle-solutions.comparisons
+(ns comparisons
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 166 - Comparisons

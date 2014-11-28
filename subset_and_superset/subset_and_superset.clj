@@ -1,4 +1,4 @@
-(ns puzzle-solutions.subset-and-superset
+(ns subset-and-superset
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 161 - Subset and Superset

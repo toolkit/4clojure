@@ -1,4 +1,4 @@
-(ns puzzle-solutions.infinite-matrix
+(ns infinite-matrix
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 168 - Infinite Matrix

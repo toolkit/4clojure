@@ -1,4 +1,4 @@
-(ns puzzle-solutions.split-a-sequence
+(ns split-a-sequence
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 49 - Split a Sequence

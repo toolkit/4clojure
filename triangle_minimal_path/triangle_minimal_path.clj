@@ -1,4 +1,4 @@
-(ns puzzle-solutions.triangle-minimal-path
+(ns triangle-minimal-path
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 79 - Triangle Minimal Path

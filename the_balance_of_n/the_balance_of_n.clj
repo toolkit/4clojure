@@ -1,4 +1,4 @@
-(ns puzzle-solutions.the-balance-of-n
+(ns the-balance-of-n
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 115 - The balance of N

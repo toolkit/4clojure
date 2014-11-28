@@ -1,4 +1,4 @@
-(ns puzzle-solutions.partition-a-sequence
+(ns partition-a-sequence
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 54 - Partition a Sequence

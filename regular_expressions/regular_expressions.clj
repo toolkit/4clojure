@@ -1,4 +1,4 @@
-(ns puzzle-solutions.regular-expressions
+(ns regular-expressions
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 37 - Regular Expressions

@@ -1,4 +1,4 @@
-(ns puzzle-solutions.word-sorting
+(ns word-sorting
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 70 - Word Sorting

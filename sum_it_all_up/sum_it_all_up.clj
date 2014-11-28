@@ -1,4 +1,4 @@
-(ns puzzle-solutions.sum-it-all-up
+(ns sum-it-all-up
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 24 - Sum it all up

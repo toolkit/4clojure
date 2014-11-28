@@ -1,4 +1,4 @@
-(ns puzzle-solutions.crossword-puzzle
+(ns crossword-puzzle
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 111 - Crossword Puzzle

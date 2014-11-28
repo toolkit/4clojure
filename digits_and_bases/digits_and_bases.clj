@@ -1,4 +1,4 @@
-(ns puzzle-solutions.digits-and-bases
+(ns digits-and-bases
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 137 - Digits and Bases

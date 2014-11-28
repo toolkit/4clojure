@@ -1,4 +1,4 @@
-(ns puzzle-solutions.filter-perfect-squares
+(ns filter-perfect-squares
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 74 - Filter Perfect Squares

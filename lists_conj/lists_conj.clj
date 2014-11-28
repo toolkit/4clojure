@@ -1,4 +1,4 @@
-(ns puzzle-solutions.lists-conj
+(ns lists-conj
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 5 - Lists Conj

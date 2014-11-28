@@ -1,4 +1,4 @@
-(ns puzzle-solutions.balancing-brackets
+(ns balancing-brackets
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 177 - Balancing Brackets

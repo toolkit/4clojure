@@ -1,4 +1,4 @@
-(ns puzzle-solutions.read-a-binary-number
+(ns read-a-binary-number
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 122 - Read a binary number

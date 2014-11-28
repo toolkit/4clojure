@@ -1,4 +1,4 @@
-(ns puzzle-solutions.squares-squared)
+(ns squares-squared)
 
 ;; TO DO - Still to solve
 

@@ -1,4 +1,4 @@
-(ns puzzle-solutions.sequs-horribilis
+(ns sequs-horribilis
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 112 - Sequs Horribilis

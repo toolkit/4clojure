@@ -1,4 +1,4 @@
-(ns puzzle-solutions.rotate-sequence
+(ns rotate-sequence
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 44 - Rotate Sequence

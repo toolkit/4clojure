@@ -1,4 +1,4 @@
-(ns puzzle-solutions.sequence-of-pronunciations
+(ns sequence-of-pronunciations
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 110 - Sequence of Pronunciations

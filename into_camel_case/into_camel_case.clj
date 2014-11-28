@@ -1,4 +1,4 @@
-(ns puzzle-solutions.into-camel-case
+(ns into-camel-case
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 171 - Intervals

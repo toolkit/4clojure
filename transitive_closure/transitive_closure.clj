@@ -1,4 +1,4 @@
-(ns puzzle-solutions.transitive-closure
+(ns transitive-closure
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 84 - Transitive Closure

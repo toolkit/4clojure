@@ -1,4 +1,4 @@
-(ns puzzle-solutions.longest-increasing-sub-seq
+(ns longest-increasing-sub-seq
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 53 - Longest Inscreasing Sub-seq

@@ -1,4 +1,4 @@
-(ns puzzle-solutions.intro-to-maps
+(ns intro-to-maps
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 10 - Intro to Maps

@@ -1,4 +1,4 @@
-(ns puzzle-solutions.reverse-a-sequence
+(ns reverse-a-sequence
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 23 - Reverse a Sequence

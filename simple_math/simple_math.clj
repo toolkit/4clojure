@@ -1,4 +1,4 @@
-(ns puzzle-solutions.simple-math
+(ns simple-math
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 2 - Simple Math

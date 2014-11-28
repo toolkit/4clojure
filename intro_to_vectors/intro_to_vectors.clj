@@ -1,4 +1,4 @@
-(ns puzzle-solutions.intro-to-vectors
+(ns intro-to-vectors
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 6 - Intro to Vectors

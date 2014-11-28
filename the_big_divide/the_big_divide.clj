@@ -1,4 +1,4 @@
-(ns puzzle-solutions.the-big-divide
+(ns the-big-divide
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 148 - The big divide

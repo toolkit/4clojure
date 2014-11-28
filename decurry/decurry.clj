@@ -1,4 +1,4 @@
-(ns puzzle-solutions.decurry
+(ns decurry
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 158 - Decurry

@@ -1,4 +1,4 @@
-(ns puzzle-solutions.latin-square-slicing
+(ns latin-square-slicing
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 152 - Lating Square Slicing

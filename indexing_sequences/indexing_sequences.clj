@@ -1,4 +1,4 @@
-(ns puzzle-solutions.indexing-sequences
+(ns indexing-sequences
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 157 - Indexing Sequences

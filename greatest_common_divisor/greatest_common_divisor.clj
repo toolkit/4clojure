@@ -1,4 +1,4 @@
-(ns puzzle-solutions.greatest-common-divisor
+(ns greatest-common-divisor
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 66 - Greatest Common Divisor

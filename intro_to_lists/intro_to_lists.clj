@@ -1,4 +1,4 @@
-(ns puzzle-solutions.intro-to-lists
+(ns intro-to-lists
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 4 - Intro to Lists

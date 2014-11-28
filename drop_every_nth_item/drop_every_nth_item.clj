@@ -1,4 +1,4 @@
-(ns puzzle-solutions.drop-every-nth-item
+(ns drop-every-nth-item
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 41 - Drop Every Nth Item

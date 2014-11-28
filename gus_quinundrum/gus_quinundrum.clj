@@ -1,1 +1,1 @@
-(ns puzzle-solutions.gus-quinundrum)
+(ns gus-quinundrum)

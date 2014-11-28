@@ -1,4 +1,4 @@
-(ns puzzle-solutions.anagram-finder
+(ns anagram-finder
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 77 - Anagram Finder

@@ -1,4 +1,4 @@
-(ns puzzle-solutions.replicate-a-sequence
+(ns replicate-a-sequence
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 33 - Replicate a Sequence

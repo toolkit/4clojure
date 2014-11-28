@@ -1,4 +1,4 @@
-(ns puzzle-solutions.intro-to-sequences
+(ns intro-to-sequences
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 12 - Intro to Sequences

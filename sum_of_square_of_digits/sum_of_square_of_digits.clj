@@ -1,4 +1,4 @@
-(ns puzzle-solutions.sum-of-square-of-digits
+(ns sum-of-square-of-digits
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 120 - Sum of square of digits

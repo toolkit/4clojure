@@ -1,4 +1,4 @@
-(ns puzzle-solutions.insert-between-two-items
+(ns insert-between-two-items
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 132 - Insert between two items

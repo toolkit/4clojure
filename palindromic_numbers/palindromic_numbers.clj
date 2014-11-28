@@ -1,4 +1,4 @@
-(ns puzzle-solutions.palindromic-numbers
+(ns palindromic-numbers
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 150 - Palindromic Numbers

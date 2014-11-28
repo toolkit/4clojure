@@ -1,4 +1,4 @@
-(ns puzzle-solutions.sets-conj
+(ns sets-conj
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 9 - Sets: Conj

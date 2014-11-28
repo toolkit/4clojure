@@ -1,4 +1,4 @@
-(ns puzzle-solutions.word-chains)
+(ns word-chains)
 
 ;; STILL UNDER DEVELOPMENT
 

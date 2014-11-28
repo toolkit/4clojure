@@ -1,4 +1,4 @@
-(ns puzzle-solutions.intro-to-iterate
+(ns intro-to-iterate
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 45 - Intro to Iterate

@@ -1,4 +1,4 @@
-(ns puzzle-solutions.happy-numbers
+(ns happy-numbers
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 86 - Happy numbers

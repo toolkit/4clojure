@@ -1,4 +1,4 @@
-(ns puzzle-solutions.pairwise-disjoint-sets
+(ns pairwise-disjoint-sets
    (:require [clojure.test :refer [is]]))
 
 ;; Problem 153 - Pairwise disjoint sets

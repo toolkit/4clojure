@@ -1,4 +1,4 @@
-(ns puzzle-solutions.interleave-two-sequences
+(ns interleave-two-sequences
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 39 - Interleave two sequences

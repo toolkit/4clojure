@@ -1,4 +1,4 @@
-(ns puzzle-solutions.intro-to-some
+(ns intro-to-some
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 48 - Intro to Some

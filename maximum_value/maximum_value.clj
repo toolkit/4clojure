@@ -1,4 +1,4 @@
-(ns puzzle-solutions.maximum-value
+(ns maximum-value
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 38 - Maximum Value

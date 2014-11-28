@@ -1,4 +1,4 @@
-(ns puzzle-solutions.number-maze
+(ns number-maze
    (:require [clojure.test :refer [is]]))
 
 ;; Problem 106 - Number Maze

@@ -1,4 +1,4 @@
-(ns puzzle-solutions.intro-to-sets
+(ns intro-to-sets
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 8 - Intro to Sets

@@ -1,4 +1,4 @@
-(ns puzzle-solutions.read-roman-numerals
+(ns read-roman-numerals
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 92 - Read Roman Numerals

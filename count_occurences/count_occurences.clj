@@ -1,4 +1,4 @@
-(ns puzzle-solutions.count-occurences
+(ns count-occurences
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 55 - Count Occurences

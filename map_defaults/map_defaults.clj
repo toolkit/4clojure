@@ -1,4 +1,4 @@
-(ns puzzle-solutions.map-defaults
+(ns map-defaults
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 156 - Map Defaults

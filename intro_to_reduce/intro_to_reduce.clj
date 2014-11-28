@@ -1,4 +1,4 @@
-(ns puzzle-solutions.intro-to-reduce
+(ns intro-to-reduce
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 64 - Intro to Reduce

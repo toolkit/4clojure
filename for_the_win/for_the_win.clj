@@ -1,4 +1,4 @@
-(ns puzzle-solutions.for-the-win
+(ns for-the-win
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 145 - For the Win

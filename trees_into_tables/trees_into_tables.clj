@@ -1,4 +1,4 @@
-(ns puzzle-solutions.trees-into-tables
+(ns trees-into-tables
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 146 - Trees into tables

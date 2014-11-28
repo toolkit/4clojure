@@ -1,4 +1,4 @@
-(ns puzzle-solutions.global-take-while
+(ns global-take-while
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 114 - Global take while

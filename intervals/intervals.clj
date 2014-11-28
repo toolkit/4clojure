@@ -1,4 +1,4 @@
-(ns puzzle-solutions.intervals
+(ns intervals
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 171 - Intervals

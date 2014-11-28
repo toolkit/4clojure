@@ -1,4 +1,4 @@
-(ns puzzle-solutions.levenshtein-distance
+(ns levenshtein-distance
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 101 - Levenshtein distance

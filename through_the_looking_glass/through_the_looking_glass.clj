@@ -1,4 +1,4 @@
-(ns puzzle-solutions.through-the-looking-glass
+(ns through-the-looking-glass
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 126 - Through the looking glass

@@ -1,4 +1,4 @@
-(ns puzzle-solutions.group-a-sequence
+(ns group-a-sequence
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 63 - Group a Sequence

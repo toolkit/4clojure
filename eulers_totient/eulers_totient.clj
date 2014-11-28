@@ -1,4 +1,4 @@
-(ns puzzle-solutions.eulers-totient
+(ns eulers-totient
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 75 - Eulers Totient

@@ -1,4 +1,4 @@
-(ns puzzle-solutions.least-common-multiple
+(ns least-common-multiple
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 100 - Least Common Multiple

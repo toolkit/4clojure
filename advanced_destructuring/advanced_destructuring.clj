@@ -1,4 +1,4 @@
-(ns puzzle-solutions.advanced-destructuring
+(ns advanced-destructuring
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 51 - Advanced Destructuring

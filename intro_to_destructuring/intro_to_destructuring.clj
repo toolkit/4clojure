@@ -1,4 +1,4 @@
-(ns puzzle-solutions.intro-to-destructuring
+(ns intro-to-destructuring
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 53 - Intro to Destructuring

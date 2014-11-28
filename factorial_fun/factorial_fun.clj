@@ -1,4 +1,4 @@
-(ns puzzle-solutions.factorial-fun
+(ns factorial-fun
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 42 - Factorial Fun

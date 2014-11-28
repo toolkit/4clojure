@@ -1,4 +1,4 @@
-(ns puzzle-solutions.let-it-be
+(ns let-it-be
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 36 - Let it Be

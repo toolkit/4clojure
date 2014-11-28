@@ -1,4 +1,4 @@
-(ns puzzle-solutions.reconize-playing-cards
+(ns reconize-playing-cards
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 128 - Recognize Playing Cards

@@ -1,4 +1,4 @@
-(ns puzzle-solutions.hello-world
+(ns hello-world
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 16 - Hello World

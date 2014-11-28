@@ -1,4 +1,4 @@
-(ns puzzle-solutions.black-box-testing
+(ns black-box-testing
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 58 - function composition

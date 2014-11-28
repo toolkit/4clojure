@@ -1,4 +1,4 @@
-(ns puzzle-solutions.local-bindings
+(ns local-bindings
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 35 - Local Bindings

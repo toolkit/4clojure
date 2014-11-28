@@ -1,4 +1,4 @@
-(ns puzzle-solutions.equivalence-classes
+(ns equivalence-classes
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 32 - Duplicate a Sequence

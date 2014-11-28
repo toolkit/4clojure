@@ -1,4 +1,4 @@
-(ns  puzzle-solutions.symmetric-difference
+(ns  symmetric-difference
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 88 - Symmetrics Difference

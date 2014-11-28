@@ -1,4 +1,4 @@
-(ns puzzle-solutions.analyze-a-tic-tac-toe-board
+(ns analyze-a-tic-tac-toe-board
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 73 - Analyze a Tic-Tac-Toe Board

@@ -1,4 +1,4 @@
-(ns puzzle-solutions.recurring-theme
+(ns recurring-theme
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 68 - Recurring Theme

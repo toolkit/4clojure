@@ -1,4 +1,4 @@
-(ns puzzle-solutions.pack-a-sequence
+(ns pack-a-sequence
    (:require [clojure.test :refer [is]]))
 
 ;; Problem 31 - Pack a Sequence

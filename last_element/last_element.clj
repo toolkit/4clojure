@@ -1,4 +1,4 @@
-(ns puzzle-solutions.last-element
+(ns last-element
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 19 - Last Element

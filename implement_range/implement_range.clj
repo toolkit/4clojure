@@ -1,4 +1,4 @@
-(ns puzzle-solutions.implement-range
+(ns implement-range
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 34 - Implement Range

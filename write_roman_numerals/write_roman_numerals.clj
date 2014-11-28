@@ -1,4 +1,4 @@
-(ns puzzle-solutions.write-roman-numerals
+(ns write-roman-numerals
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 104 - Write Roman Numerals

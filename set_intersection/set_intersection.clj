@@ -1,4 +1,4 @@
-(ns puzzle-solutions.set-intersection
+(ns set-intersection
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 81 - Set Intersection

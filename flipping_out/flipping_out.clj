@@ -1,4 +1,4 @@
-(ns puzzle-solutions.flipping-out
+(ns flipping-out
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 46 - Flipping Out

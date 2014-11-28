@@ -1,4 +1,4 @@
-(ns puzzle-solutions.vectors-conj
+(ns vectors-conj
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 7 - Vectors: Conj

@@ -1,4 +1,4 @@
-(ns puzzle-solutions.prime-numbers
+(ns prime-numbers
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 67 - Prime Numbers

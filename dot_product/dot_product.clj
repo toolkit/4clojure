@@ -1,4 +1,4 @@
-(ns puzzle-solutions.dot-product
+(ns dot-product
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 143 - Dot Product

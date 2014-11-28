@@ -1,4 +1,4 @@
-(ns puzzle-solutions.cartesian-product
+(ns cartesian-product
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 90 - Cartesian Product

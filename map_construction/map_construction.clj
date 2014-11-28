@@ -1,4 +1,4 @@
-(ns puzzle-solutions.map-construction
+(ns map-construction
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 61 - Map Construction

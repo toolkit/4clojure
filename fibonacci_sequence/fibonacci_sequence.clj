@@ -1,4 +1,4 @@
-(ns puzzle-solutions.fibonacci-sequence
+(ns fibonacci-sequence
   (:require [clojure.test :refer [is]]))
 
 ;; Problem 26 - Fibonacci Sequence
