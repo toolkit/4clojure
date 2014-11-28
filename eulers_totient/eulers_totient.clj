@@ -1,5 +1,5 @@
 (ns eulers-totient
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 75 - Eulers Totient
 ;; http://www.4clojure.com/problem/75
@@ -10,7 +10,8 @@
                       (coprime? [a b] (= 1 (gcd a b)))]
                 (count (filter (partial coprime? x) (range 1 x)))))))
 
-(is (= (__ 1) 1))
-(is (= (__ 10) (count '(1 3 7 9)) 4))
-(is (= (__ 40) 16))
-(is (= (__ 99) 60))
+(deftest tests
+  (is (= (__ 1) 1))
+  (is (= (__ 10) (count '(1 3 7 9)) 4))
+  (is (= (__ 40) 16))
+  (is (= (__ 99) 60)))
