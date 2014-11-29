@@ -1,5 +1,5 @@
 (ns into-camel-case
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 171 - Intervals
 ;; http://www.4clojure.com/problem/171
@@ -10,8 +10,7 @@
            #"-(.)"
            #(clojure.string/upper-case (last %1)))))
 
-
-
-(is (= (__ "something") "something"))
-(is (= (__ "multi-word-key") "multiWordKey"))
-(is (= (__ "leaveMeAlone") "leaveMeAlone"))
+(deftest tests
+  (is (= (__ "something") "something"))
+  (is (= (__ "multi-word-key") "multiWordKey"))
+  (is (= (__ "leaveMeAlone") "leaveMeAlone")))
