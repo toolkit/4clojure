@@ -6,4 +6,5 @@
 
 (def __ "ABC")
 
-(is (= __ (apply str (re-seq #"[A-Z]+" "bA1B3Ce"))))
+(deftest tests
+  (is (= __ (apply str (re-seq #"[A-Z]+" "bA1B3Ce")))))

@@ -6,5 +6,6 @@
 
 (def __ 6)
 
-(is (= __ (some #{2 7 6} [5 6 7 8])))
-(is (= __ (some #(when (even? %) %) [5 6 7 8])))
+(deftest tests
+  (is (= __ (some #{2 7 6} [5 6 7 8])))
+  (is (= __ (some #(when (even? %) %) [5 6 7 8]))))

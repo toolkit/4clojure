@@ -9,9 +9,10 @@
                         (every? (complement sequential?) %))
                   (tree-seq sequential? seq x))))
 
-(is (= (__ [["Do"] ["Nothing"]])
-       [["Do"] ["Nothing"]]))
-(is (= (__ [[[[:a :b]]] [[:c :d]] [:e :f]])
-       [[:a :b] [:c :d] [:e :f]]))
-(is (= (__ '((1 2)((3 4)((((5 6)))))))
-       '((1 2)(3 4)(5 6))))
+(deftest tests
+  (is (= (__ [["Do"] ["Nothing"]])
+         [["Do"] ["Nothing"]]))
+  (is (= (__ [[[[:a :b]]] [[:c :d]] [:e :f]])
+         [[:a :b] [:c :d] [:e :f]]))
+  (is (= (__ '((1 2)((3 4)((((5 6)))))))
+         '((1 2)(3 4)(5 6)))))

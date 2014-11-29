@@ -6,4 +6,5 @@
 
 (def __ "HELLO WORLD")
 
-(is (= __ (.toUpperCase "hello world")))
+(deftest tests
+  (is (= __ (.toUpperCase "hello world"))))

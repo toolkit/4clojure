@@ -14,6 +14,7 @@
        (p? x)
        (= x (/ (+ a b) 2))))))
 
-(is (= false (__ 4)))
-(is (= true (__ 563)))
-(is (= 1103 (nth (filter __ (range)) 15)))
+(deftest tests
+  (is (= false (__ 4)))
+  (is (= true (__ 563)))
+  (is (= 1103 (nth (filter __ (range)) 15))))

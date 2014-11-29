@@ -1,4 +1,4 @@
-(ns prime-sandwich
+(ns product-digits
   (:require [clojure.test :refer :all]))
 
 ;; Problem 99 - Product Digits
@@ -14,6 +14,7 @@
           (conj v r)
           (recur (quot q 10) (rem q 10) (conj v r)))))))
 
-(is (= (__ 1 1) [1]))
-(is (= (__ 99 9) [8 9 1]))
-(is (= (__ 999 99) [9 8 9 0 1]))
+(deftest tests
+  (is (= (__ 1 1) [1]))
+  (is (= (__ 99 9) [8 9 1]))
+  (is (= (__ 999 99) [9 8 9 0 1])))

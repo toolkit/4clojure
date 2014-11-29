@@ -12,7 +12,8 @@
           pattern (re-pattern (apply str (interpose "|" ks)))]
       (apply + (map roman (re-seq pattern x))))))
 
-(is (= 14 (__ "XIV")))
-(is (= 827 (__ "DCCCXXVII")))
-(is (= 3999 (__ "MMMCMXCIX")))
-(is (= 48 (__ "XLVIII")))
+(deftest tests
+  (is (= 14 (__ "XIV")))
+  (is (= 827 (__ "DCCCXXVII")))
+  (is (= 3999 (__ "MMMCMXCIX")))
+  (is (= 48 (__ "XLVIII"))))

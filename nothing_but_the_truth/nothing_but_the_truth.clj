@@ -6,4 +6,5 @@
 
 (def __ true)
 
-(is (= __ true))
+(deftest tests
+  (is (= __ true)))

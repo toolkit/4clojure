@@ -6,6 +6,7 @@
 
 (def __ 3)
 
-(is (= __ (first '(3 2 1))))
-(is (= __ (second [2 3 4])))
-(is (= __ (last (list 1 2 3))))
+(deftest tests
+  (is (= __ (first '(3 2 1))))
+  (is (= __ (second [2 3 4])))
+  (is (= __ (last (list 1 2 3)))))

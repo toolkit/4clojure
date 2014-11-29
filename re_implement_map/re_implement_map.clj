@@ -9,11 +9,12 @@
     (when-let [s (seq c)]
       (cons (f (first s)) (lazy-seq (mmm f (rest s)))))))
 
-(is (= [3 4 5 6 7]
-       (__ inc [2 3 4 5 6])))
-(is (= (repeat 10 nil)
-       (__ (fn [_] nil) (range 10))))
-(is (= [1000000 1000001]
-       (->> (__ inc (range))
-            (drop (dec 1000000))
-            (take 2))))
+(deftest tests
+  (is (= [3 4 5 6 7]
+         (__ inc [2 3 4 5 6])))
+  (is (= (repeat 10 nil)
+         (__ (fn [_] nil) (range 10))))
+  (is (= [1000000 1000001]
+         (->> (__ inc (range))
+              (drop (dec 1000000))
+              (take 2)))))
