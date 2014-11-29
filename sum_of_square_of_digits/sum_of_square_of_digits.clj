@@ -12,7 +12,8 @@
                     sum (apply + (map #(* % %) digits))]
                 (< x sum))) s))))
 
-(is (= 8 (__ (range 10))))
-(is (= 19 (__ (range 30))))
-(is (= 50 (__ (range 500))))
-(is (= 50 (__ (range 1000))))
+(deftest tests
+  (is (= 8 (__ (range 10))))
+  (is (= 19 (__ (range 30))))
+  (is (= 50 (__ (range 500))))
+  (is (= 50 (__ (range 1000)))))
