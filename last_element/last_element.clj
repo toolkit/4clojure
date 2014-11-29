@@ -1,5 +1,5 @@
 (ns last-element
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 19 - Last Element
 ;; http://www.4clojure.com/problem/19

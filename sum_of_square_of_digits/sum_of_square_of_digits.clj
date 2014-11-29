@@ -1,5 +1,5 @@
 (ns sum-of-square-of-digits
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 120 - Sum of square of digits
 ;; http://www.4clojure.com/problem/120

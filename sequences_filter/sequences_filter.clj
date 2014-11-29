@@ -1,5 +1,5 @@
 (ns sequences-filter
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 18 - Sequences: Filter
 ;; http://www.4clojure.com/problem/18

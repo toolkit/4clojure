@@ -1,5 +1,5 @@
 (ns juxtaposition
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 59 - Juxtaposition
 ;; http://www.4clojure.com/problem/59

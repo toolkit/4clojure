@@ -1,5 +1,5 @@
 (ns pairwise-disjoint-sets
-   (:require [clojure.test :refer [is]]))
+   (:require [clojure.test :refer :all]))
 
 ;; Problem 153 - Pairwise disjoint sets
 ;; http://www.4clojure.com/problem/153

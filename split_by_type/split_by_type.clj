@@ -1,5 +1,5 @@
 (ns split-by-type
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 50 - Split by Type
 ;; http://www.4clojure.com/problem/50

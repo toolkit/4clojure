@@ -1,5 +1,5 @@
 (ns reverse-interleave
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 43 - Reverse Interleave
 ;; http://www.4clojure.com/problem/43

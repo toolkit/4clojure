@@ -1,5 +1,5 @@
 (ns sets-conj
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 9 - Sets: Conj
 ;; http://www.4clojure.com/problem/9

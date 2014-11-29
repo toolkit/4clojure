@@ -1,5 +1,5 @@
 (ns lazy-searching
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 108 - Lazy Searching
 ;; http://www.4clojure.com/problem/108

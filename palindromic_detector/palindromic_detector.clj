@@ -1,5 +1,5 @@
 (ns palindromic-detector
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 27 - Palindromic Detector
 ;; http://www.4clojure.com/problem/27

@@ -1,5 +1,5 @@
 (ns partially-flatten-a-sequence
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 93 - Partially Flatten a Sequence
 ;; http://www.4clojure.com/problem/93

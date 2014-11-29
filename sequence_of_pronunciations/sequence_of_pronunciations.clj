@@ -1,5 +1,5 @@
 (ns sequence-of-pronunciations
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 110 - Sequence of Pronunciations
 ;; http://www.4clojure.com/problem/110

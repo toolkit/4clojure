@@ -1,5 +1,5 @@
 (ns intro-to-vectors
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 6 - Intro to Vectors
 ;; http://www.4clojure.com/problem/6

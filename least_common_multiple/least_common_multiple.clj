@@ -1,5 +1,5 @@
 (ns least-common-multiple
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 100 - Least Common Multiple
 ;; http://www.4clojure.com/problem/100

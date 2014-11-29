@@ -1,5 +1,5 @@
 (ns sequences-rest
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 13 - Sequences: Rest
 ;; http://www.4clojure.com/problem/13

@@ -1,5 +1,5 @@
 (ns rearranging-code-1
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 71 - Rearranging Code: ->
 ;; http://www.4clojure.com/problem/71

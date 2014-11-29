@@ -1,5 +1,5 @@
 (ns levenshtein-distance
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 101 - Levenshtein distance
 ;; http://www.4clojure.com/problem/101

@@ -1,5 +1,5 @@
 (ns intro-to-reduce
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 64 - Intro to Reduce
 ;; http://www.4clojure.com/problem/64

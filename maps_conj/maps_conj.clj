@@ -1,5 +1,5 @@
 (ns maps-conj
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 11 - Maps Conj
 ;; http://www.4clojure.com/problem/11

@@ -1,5 +1,5 @@
 (ns re-implement-iterate
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 62 - Re-implement iterate
 ;; http://www.4clojure.com/problem/62

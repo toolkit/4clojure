@@ -1,5 +1,5 @@
 (ns logical-falsity-and-truth
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 162 - Logical Falsity and Truth
 ;; http://www.4clojure.com/problem/162

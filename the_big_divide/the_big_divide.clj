@@ -1,5 +1,5 @@
 (ns the-big-divide
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 148 - The big divide
 ;; http://www.4clojure.com/problem/148

@@ -1,5 +1,5 @@
 (ns longest-increasing-sub-seq
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 53 - Longest Inscreasing Sub-seq
 ;; http://www.4clojure.com/problem/53

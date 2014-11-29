@@ -1,5 +1,5 @@
 (ns regular-expressions
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 37 - Regular Expressions
 ;; http://www.4clojure.com/problem/37

@@ -1,5 +1,5 @@
 (ns recurring-theme
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 68 - Recurring Theme
 ;; http://www.4clojure.com/problem/68

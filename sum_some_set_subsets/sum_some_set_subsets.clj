@@ -1,5 +1,5 @@
 (ns  sum-some-set-subsets
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 131 - Sum some set subsets
 ;; http://www.4clojure.com/problem/131

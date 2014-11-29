@@ -1,5 +1,5 @@
 (ns oscilrate
-   (:require [clojure.test :refer [is]]))
+   (:require [clojure.test :refer :all]))
 
 ;; Problem 144 - Oscilrate
 ;; http://www.4clojure.com/problem/144

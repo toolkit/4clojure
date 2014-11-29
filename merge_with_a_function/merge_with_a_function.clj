@@ -1,5 +1,5 @@
 (ns merge-with-a-function
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 69 - Merge With A Function
 ;; http://www.4clojure.com/problem/69

@@ -1,5 +1,5 @@
 (ns replicate-a-sequence
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 33 - Replicate a Sequence
 ;; http://www.4clojure.com/problem/33

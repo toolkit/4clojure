@@ -1,5 +1,5 @@
 (ns lists-conj
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 5 - Lists Conj
 ;; http://www.4clojure.com/problem/5

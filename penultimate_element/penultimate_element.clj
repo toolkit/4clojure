@@ -1,5 +1,5 @@
 (ns penultimate-element
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 20 - Penultimate Element
 ;; http://www.4clojure.com/problem/20

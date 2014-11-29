@@ -1,5 +1,5 @@
 (ns simple-closures
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 107 - Simple Closures
 ;; http://www.4clojure.com/problem/107

@@ -1,5 +1,5 @@
 (ns simple-recursion
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 57 - Simple Recursion
 ;; http://www.4clojure.com/problem/57

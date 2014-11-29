@@ -1,5 +1,5 @@
 (ns read-roman-numerals
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 92 - Read Roman Numerals
 ;; http://www.4clojure.com/problem/92

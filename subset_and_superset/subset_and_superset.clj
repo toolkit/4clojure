@@ -1,5 +1,5 @@
 (ns subset-and-superset
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 161 - Subset and Superset
 ;; http://www.4clojure.com/problem/161

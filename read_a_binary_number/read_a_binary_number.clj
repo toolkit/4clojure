@@ -1,5 +1,5 @@
 (ns read-a-binary-number
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 122 - Read a binary number
 ;; http://www.4clojure.com/problem/122

@@ -1,5 +1,5 @@
 (ns sequs-horribilis
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 112 - Sequs Horribilis
 ;; http://www.4clojure.com/problem/112

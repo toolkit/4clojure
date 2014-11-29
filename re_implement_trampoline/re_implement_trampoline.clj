@@ -1,5 +1,5 @@
 (ns re-implement-trampoline
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 78 - Reimplement Trampoline
 ;; http://www.4clojure.com/problem/78

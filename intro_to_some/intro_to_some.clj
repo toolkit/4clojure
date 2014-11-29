@@ -1,5 +1,5 @@
 (ns intro-to-some
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 48 - Intro to Some
 ;; http://www.4clojure.com/problem/48

@@ -1,5 +1,5 @@
 (ns making-data-dance
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 113 - Making Data Dance
 ;; http://www.4clojure.com/problem/113

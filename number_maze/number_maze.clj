@@ -1,5 +1,5 @@
 (ns number-maze
-   (:require [clojure.test :refer [is]]))
+   (:require [clojure.test :refer :all]))
 
 ;; Problem 106 - Number Maze
 ;; http://www.4clojure.com/problem/106

@@ -1,5 +1,5 @@
 (ns re-implement-map
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 118 - Re-implement map
 ;; http://www.4clojure.com/problem/118

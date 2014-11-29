@@ -1,5 +1,5 @@
 (ns sequence-reductions
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 60 - Sequence Reductions
 ;; http://www.4clojure.com/problem/60

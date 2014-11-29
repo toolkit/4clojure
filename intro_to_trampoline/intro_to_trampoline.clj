@@ -1,5 +1,5 @@
 (ns intro-to-trampoline
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 76 - Intro to Trampoline
 ;; http://www.4clojure.com/problem/76

@@ -1,5 +1,5 @@
 (ns  symmetric-difference
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 88 - Symmetrics Difference
 ;; http://www.4clojure.com/problem/88

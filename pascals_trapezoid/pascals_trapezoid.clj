@@ -1,5 +1,5 @@
 (ns pascals-trapezoid
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 147 - Pascal's Trapezoid
 ;; http://www.4clojure.com/problem/147

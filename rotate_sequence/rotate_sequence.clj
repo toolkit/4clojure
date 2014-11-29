@@ -1,5 +1,5 @@
 (ns rotate-sequence
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 44 - Rotate Sequence
 ;; http://www.4clojure.com/problem/44

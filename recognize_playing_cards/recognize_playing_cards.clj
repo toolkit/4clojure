@@ -1,5 +1,5 @@
 (ns reconize-playing-cards
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 128 - Recognize Playing Cards
 ;; http://www.4clojure.com/problem/128

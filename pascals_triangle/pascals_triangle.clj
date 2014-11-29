@@ -1,5 +1,5 @@
 (ns pascals-triangle
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 97 - Pascal's Traiangle
 ;; http://www.4clojure.com/problem/97

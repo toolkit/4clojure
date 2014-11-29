@@ -1,5 +1,5 @@
 (ns let-it-be
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 36 - Let it Be
 ;; http://www.4clojure.com/problem/36

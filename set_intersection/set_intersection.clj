@@ -1,5 +1,5 @@
 (ns set-intersection
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 81 - Set Intersection
 ;; http://www.4clojure.com/problem/81

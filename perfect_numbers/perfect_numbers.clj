@@ -1,5 +1,5 @@
 (ns perfect-numbers
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 80 - Perfect Numbers
 ;; http://www.4clojure.com/problem/80

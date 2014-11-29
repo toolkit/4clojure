@@ -1,5 +1,5 @@
 (ns palindromic-numbers
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 150 - Palindromic Numbers
 ;; http://www.4clojure.com/problem/150

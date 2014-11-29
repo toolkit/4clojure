@@ -1,5 +1,5 @@
 (ns intro-to-sequences
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 12 - Intro to Sequences
 ;; http://www.4clojure.com/problem/12

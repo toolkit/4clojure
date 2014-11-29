@@ -1,5 +1,5 @@
 (ns local-bindings
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 35 - Local Bindings
 ;; http://www.4clojure.com/problem/35

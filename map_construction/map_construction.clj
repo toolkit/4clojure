@@ -1,5 +1,5 @@
 (ns map-construction
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 61 - Map Construction
 ;; http://www.4clojure.com/problem/61

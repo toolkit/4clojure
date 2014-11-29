@@ -1,5 +1,5 @@
 (ns intro-to-sets
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 8 - Intro to Sets
 ;; http://www.4clojure.com/problem/8

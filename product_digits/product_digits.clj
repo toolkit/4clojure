@@ -1,5 +1,5 @@
 (ns prime-sandwich
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 99 - Product Digits
 ;; http://www.4clojure.com/problem/99

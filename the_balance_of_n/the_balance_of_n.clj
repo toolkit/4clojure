@@ -1,5 +1,5 @@
 (ns the-balance-of-n
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 115 - The balance of N
 ;; http://www.4clojure.com/problem/115

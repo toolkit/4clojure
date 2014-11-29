@@ -1,5 +1,5 @@
 (ns latin-square-slicing
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer :all]))
 
 ;; Problem 152 - Lating Square Slicing
 ;; http://www.4clojure.com/problem/152
