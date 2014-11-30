@@ -6,5 +6,5 @@
 
 (def __ [1 2 3 4 5])
 
-(deftest test
+(deftest tests
   (is (= [1 2 [3 4 5] [1 2 3 4 5]] (let [[a b & c :as d] __] [a b c d]))))
