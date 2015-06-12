@@ -4,3 +4,6 @@ target
 .nrepl-port
 .idea
 .lein-failures
+/.idea
+/target
+*.iml
