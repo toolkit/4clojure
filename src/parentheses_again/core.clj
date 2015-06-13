@@ -1,4 +1,4 @@
-(ns parentheses-again.parentheses-again.core
+(ns parentheses-again.core
   (:require [clojure.test :refer :all]))
 
 ;; Problem 195 - Parentheses .. again
