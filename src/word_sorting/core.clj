@@ -13,3 +13,5 @@
          ["a" "Clojure" "fun" "is" "language"]))
   (is (= (__  "Fools fall for foolish follies.")
          ["fall" "follies" "foolish" "Fools" "for"])))
+
+;; Still not solved.
