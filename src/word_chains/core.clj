@@ -1,47 +1,51 @@
 (ns word-chains.core
+  (:use [midje.sweet])
   (:require [clojure.test :refer :all]))
 
 ;; Problem 82 - Word Chains
 ;; http://www.4clojure.com/problem/82
 
-(def __ (fn word-chain [words]
-          (let [mlev (memoize
-                       (fn [mem s t]
-                         (let [slen (count s)
-                               tlen (count t)
-                               cost (if (= (last s) (last t)) 0 1)]
-                           (cond
-                             (zero? slen) tlen
-                             (zero? tlen) slen
-                             :else (min
-                                     (+ 1 (mem mem (butlast s) t))
-                                     (+ 1 (mem mem s (butlast t)))
-                                     (+ cost (mem mem (butlast s) (butlast t))))))))
-                lev (partial mlev mlev)
-                combinations (fn [k s]
-                               (letfn [(powerset [s]
-                                                 (reduce (fn [ps x]
-                                                           (reduce (fn [ps s]
-                                                                     (conj ps (conj s x))) ps ps)) #{#{}} s))]
-                                 (set (filter #(= k (count %)) (powerset s)))))
-                one-different (fn [words]
-                                (filter (fn [word-pair]
-                                          (= 1 (apply lev word-pair)))
-                                        (combinations 2 words)))
-                connected? (fn [words]
-                             (let [edges (one-different words)
-                                   sets (set (map set edges))
-                                   nodes (set (mapcat identity sets))
-                                   grow (fn [nodes]
-                                          (set (mapcat identity (for [n nodes s sets :when (contains? s n)] s))))
-                                   connected (loop [prev #{(first nodes)} next (grow prev)]
-                                               (if (= prev next) prev (recur next (grow next))))]
-                               (= words connected)))]
-            (connected? words))))
+(def __ (fn [_] false))
 
-; Need to solve the graph tour before this works properly
-; Connected just confirms all nodes are connected, not that
-; they form a walk.
+(defn lev [s t]
+  (let [mlev
+        (memoize
+          (fn [mem s t]
+            (let [slen (count s)
+                  tlen (count t)
+                  cost (if (= (last s) (last t)) 0 1)]
+              (cond
+                (zero? slen) tlen
+                (zero? tlen) slen
+                :else (min
+                        (+ 1 (mem mem (butlast s) t))
+                        (+ 1 (mem mem s (butlast t)))
+                        (+ cost (mem mem (butlast s) (butlast t))))))))]
+    (mlev mlev s t)))
+
+(defn pairs [s]
+  (into #{} (for [x s y s :when (neg? (compare x y))] [x y])))
+
+(defn just-ones [s]
+  (into #{} (filter (fn [[x y]] (= 1 (lev x y))) (pairs s))))
+
+(facts "about levenshtein distance"
+       (lev "abc" "ab") => 1
+       (lev "abb" "abc") => 1
+       (lev "abc" "abcdef") => 3)
+
+(facts "about pairs"
+       (pairs #{1 2 3}) => #{[1 2] [1 3] [2 3]}
+       (pairs #{"abc" "def" "ghi" "jkl"})
+        => #{["abc" "def"] ["abc" "ghi"] ["abc" "jkl"] ["def" "ghi"] ["def" "jkl"] ["ghi" "jkl"]})
+
+(facts "about just-ones"
+       (just-ones #{"abc" "ab" "abcd" "zzz" "kkk" "lll"})
+        => #{["ab" "abc"] ["abc" "abcd"]}
+       (just-ones #{"hat" "coat" "dog" "cat" "oat" "cot" "hot" "hog"})
+        => #{["cat" "hat"] ["hat" "oat"] ["hat" "hot"] ["coat" "oat"]
+             ["coat" "cot"] ["cat" "cot"] ["cat" "oat"] ["cat" "coat"]
+             ["dog" "hog"] ["cot" "hot"] ["hog" "hot"] })
 
 (deftest tests
   (is (= true (__ #{"hat" "coat" "dog" "cat" "oat" "cot" "hot" "hog"})))
