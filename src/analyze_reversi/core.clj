@@ -6,7 +6,7 @@
 
 (def __ (fn [x] nil))
 
-(deftests tests
+(deftest tests
   (is  (= {[1 3] #{[1 2]}, [0 2] #{[1 2]}, [3 1] #{[2 1]}, [2 0] #{[2 1]}}
           (__ '[[e e e e]
                 [e w b e]
