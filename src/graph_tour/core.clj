@@ -1,5 +1,5 @@
 (ns graph-tour.core
-  (:require [clojure.test :refer :all]))
+  (:use [midje.sweet]))
 
 ;; Problem 89 - Graph Tour
 ;; https://www.4clojure.com/problem/89
@@ -24,12 +24,13 @@
                                    (and connected? (= 2 (count odds))) :path)]
             (not (nil? path-or-circuit)))))
 
-(deftest tests
-  (is (= true (__ [[:a :b]])))
-  (is (= false (__ [[:a :a] [:b :b]])))
-  (is (= false (__ [[:a :b] [:a :b] [:a :c] [:c :a] [:a :d] [:b :d] [:c :d]])))
-  (is (= true (__ [[1 2] [2 3] [3 4] [4 1]])))
-  (is (= true (__ [[:a :b] [:a :c] [:c :b] [:a :e]
-                   [:b :e] [:a :d] [:b :d] [:c :e]
-                   [:d :e] [:c :f] [:d :f]])))
-  (is (= false (__ [[1 2] [2 3] [2 4] [2 5]]))))
+(facts "about graph tour"
+       (__ [[:a :b]])                        => true
+       (__ [[:a :a] [:b :b]])                => false
+       (__ [[:a :b] [:a :b] [:a :c] [:c :a]
+            [:a :d] [:b :d] [:c :d]])        => false
+       (__ [[1 2] [2 3] [3 4] [4 1]])        => true
+       (__ [[:a :b] [:a :c] [:c :b] [:a :e]
+            [:b :e] [:a :d] [:b :d] [:c :e]
+            [:d :e] [:c :f] [:d :f]])        => true
+       (__ [[1 2] [2 3] [2 4] [2 5]])        => false)
