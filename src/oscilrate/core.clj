@@ -4,9 +4,8 @@
 ;; Problem 144 - Oscilrate
 ;; http://www.4clojure.com/problem/144
 
-(def __ (fn osc [x & fs]
-          (let [f (first fs) r (rest fs)]
-            (cons x (lazy-seq (apply osc (flatten [(f x) r f])))))))
+(def __ (fn [x & fs]
+          (reductions #(%2 %1) x (cycle fs))))
 
 (deftest tests
   (is (= (take 3 (__ 3.14 int double)) [3.14 3 3.0]))
