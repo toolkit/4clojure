@@ -1,6 +1,5 @@
 (ns word-chains.core
-  (:use [midje.sweet])
-  (:require [clojure.test :refer :all]))
+  (:use [midje.sweet]))
 
 ;; Problem 82 - Word Chains
 ;; http://www.4clojure.com/problem/82
@@ -56,4 +55,3 @@
        (__ #{"spout" "do" "pot" "pout" "spot" "dot"})           => true
        (__ #{"share" "hares" "shares" "hare" "are"})            => true
        (__ #{"share" "hares" "hare" "are"})                     => false)
-
