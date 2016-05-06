@@ -1,8 +1,6 @@
 (ns squares-squared.core
   (:require [clojure.test :refer :all]))
 
-;; TO DO - Still to solve
-
 ;; Problem 138 - Squares Squared
 ;; http://www.4clojure.com/problem/138
 
@@ -34,9 +32,6 @@
 ;;      x     5 "  * *  "
 ;;            6 "   *   "
 
-;;
-;; As one enourmous function
-;;
 (def __ (fn [start end]
           (let [squares (fn [s e]
                           (take-while #(<= % e) (iterate #(* % %) s)))
