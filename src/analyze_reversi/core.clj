@@ -28,12 +28,14 @@
                                            (follow-direction board (mapv + start direction) direction))))
                 flip (fn [board path color]
                        (let [complement (zipmap '[w b] '[b w])
-                             first-color (get-in board (first path))
-                             result (and (= 'e first-color)
-                                         (take-while (fn [cell]
-                                                       (= (complement color) (get-in board cell))) (rest path)))]
-                         (when result
-                           (set result))))]
+                             first-cell (first path)
+                             filter (fn [cell] (= (complement color) (get-in board cell)))
+                             flip-cells (take-while filter (rest path))
+                             last-cell (first (drop-while filter (rest path)))]
+                         (set (when (and (= 'e (get-in board first-cell))
+                                         (> (count flip-cells) 0)
+                                         (= color (get-in board last-cell)))
+                                flip-cells))))]
             (for [x (range 4)
                   y (range 4)
                   direction directions
@@ -42,49 +44,6 @@
                         flipped (flip board path color)]
                   :when (> (count flipped) 0)]
               [start flipped])))))
-
-(def directions (for [x [-1 0 1] y [-1 0 1] :when (not (= 0 x y))] [x y]))
-
-(defn follow-direction [board start direction]
-  (lazy-seq
-    (cons start (follow-direction board (mapv + start direction) direction))))
-
-(defn colours [board start direction]
-  (map (partial get-in board) (follow-direction board start direction)))
-
-(defn how-many? [colour colours]
-  (let [complement (zipmap '[w b] '[b w])]
-    (and (= 'e (first colours))
-      (take-while (fn [c]
-                    (= (complement colour) c)) (rest colours)))))
-
-(defn flipped [board path color]
-  (let [complement (zipmap '[w b] '[b w])
-        first-cell (first path)
-        filter (fn [cell]
-                 (= (complement color) (get-in board cell)))
-        flip-cells (take-while filter (rest path))
-        last-cell (drop-while filter (rest path))]
-    (first path)
-    (comment (and (= 'e (get-in board first-cell))
-                  (> (count flip-cells) 0)
-                  (= color (get-in board last-cell))))))
-
-(let [b '[[e e e e]
-          [e w b e]
-          [e b w e]
-          [e e e b]]]
-  (flipped b (follow-direction b [0 0] [1 1]) 'b))
-
-(take 10 (follow-direction '[[e e e e]
-                             [e w b e]
-                             [e b w e]
-                             [e e e b]] [0 0] [1 1]))
-
-(__ '[[e e e e]
-      [e w b e]
-      [w w b e]
-      [e e b e]] 'w)
 
 (deftest tests
          (is (= (__ '[[e e e e]
