@@ -22,10 +22,10 @@
   (fn [board color]
     (into {}
           (let [directions (for [x [-1 0 1] y [-1 0 1] :when (not (= 0 x y))] [x y])
-                follow-direction (fn follow-direction [board start direction]
+                follow-direction (fn follow-direction [start direction]
                                    (lazy-seq
                                      (cons start
-                                           (follow-direction board (mapv + start direction) direction))))
+                                           (follow-direction (mapv + start direction) direction))))
                 flip (fn [board path color]
                        (let [complement (zipmap '[w b] '[b w])
                              first-cell (first path)
@@ -40,7 +40,7 @@
                   y (range 4)
                   direction directions
                   :let [start [x y]
-                        path (follow-direction board start direction)
+                        path (follow-direction start direction)
                         flipped (flip board path color)]
                   :when (> (count flipped) 0)]
               [start flipped])))))
