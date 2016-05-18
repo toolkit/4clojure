@@ -21,17 +21,13 @@
 (def __
   (fn [board color]
     (into {}
-          (let [directions (for [x [-1 0 1] y [-1 0 1] :when (not (= 0 x y))] [x y])
-                follow-direction (fn follow-direction [start direction]
-                                   (lazy-seq
-                                     (cons start
-                                           (follow-direction (mapv + start direction) direction))))
+          (let [directions (for [x [-1 0 1] y [-1 0 1] :when (not= 0 x y)] [x y])
+                follow (fn follow [direction start] (iterate (partial map + direction) start))
                 flip (fn [board path color]
-                       (let [complement (zipmap '[w b] '[b w])
-                             first-cell (first path)
-                             filter (fn [cell] (= (complement color) (get-in board cell)))
-                             flip-cells (take-while filter (rest path))
-                             last-cell (first (drop-while filter (rest path)))]
+                       (let [first-cell (first path)
+                             enemy? (fn [cell] (= ({'w 'b 'b 'w} color) (get-in board cell)))
+                             flip-cells (take-while enemy? (rest path))
+                             last-cell (first (drop-while enemy? (rest path)))]
                          (set (when (and (= 'e (get-in board first-cell))
                                          (> (count flip-cells) 0)
                                          (= color (get-in board last-cell)))
@@ -40,7 +36,7 @@
                   y (range 4)
                   direction directions
                   :let [start [x y]
-                        path (follow-direction start direction)
+                        path (follow direction start)
                         flipped (flip board path color)]
                   :when (> (count flipped) 0)]
               [start flipped])))))
