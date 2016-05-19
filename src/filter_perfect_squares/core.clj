@@ -8,7 +8,7 @@
           (apply str
                  (interpose ","
                             (filter #(let [l (int (Math/sqrt %))]
-                                       (= % (* l l)))
+                                      (= % (* l l)))
                                     (map #(read-string %) (.split s ",")))))))
 
 (deftest tests
