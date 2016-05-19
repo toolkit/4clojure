@@ -5,12 +5,12 @@
 ;; http://www.4clojure.com/problem/177
 
 (def __ #(let [a (clojure.string/replace % #"[^\(^\)^\[^\]^\{^\}]" "")
-       b (clojure.string/replace a #"(\(\)|\[\]|\{\})" "")]
-   (if (empty? b)
-     true
-     (if (= b %)
-       false
-       (recur b)))))
+               b (clojure.string/replace a #"(\(\)|\[\]|\{\})" "")]
+          (if (empty? b)
+            true
+            (if (= b %)
+              false
+              (recur b)))))
 
 (deftest tests
   (is (__ "This string has no brackets."))
