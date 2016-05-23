@@ -1,8 +1,15 @@
 (ns equivalence-classes.core
   (:require [clojure.test :refer :all]))
 
-;; Problem 32 - Duplicate a Sequence
-;; http://www.4clojure.com/problem/32
+;; Problem 98 - Equivalence classes
+;;
+;; http://www.4clojure.com/problem/98
+;;
+;; A function f defined on a domain D induces an equivalence relation on D, as follows:
+;; a is equivalent to b with respect to f if and only if (f a) is equal to (f b).
+;; Write a function with arguments f and D that computes the equivalence classes of D with respect to f.
+;;
+
 
 (def __ (fn [f D]
           (set (map (comp set val) (group-by f D)))))

@@ -1,14 +1,10 @@
 (ns into-camel-case.core
   (:require [clojure.test :refer :all]))
 
-;; Problem 171 - Intervals
-;; http://www.4clojure.com/problem/171
+;; Problem 102 - intoCamelCase
+;; http://www.4clojure.com/problem/102
 
-(def __ (fn [s]
-          (clojure.string/replace
-           s
-           #"-(.)"
-           #(clojure.string/upper-case (last %1)))))
+(def __ #(clojure.string/replace % #"-(.)" (comp clojure.string/upper-case last)))
 
 (deftest tests
   (is (= (__ "something") "something"))

@@ -4,7 +4,7 @@
 ;; Problem 96 - Beauty is symmetry
 ;; http://www.4clojure.com/problem/96
 
-(def __ (fn [[n l r]]
+(def __ (fn [[_ l r]]
   (let [m (fn m [[n l r]]
             (vector n (if (coll? r) (m r) r) (if (coll? l) (m l) l)))]
     (= l (m r)))))
