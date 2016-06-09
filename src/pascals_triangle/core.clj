@@ -10,8 +10,8 @@
 (comment
   "A solution using partition"
   (def __ (fn [n]
-                   (nth
-                     (iterate #(map (fn [[a b]] (+ a b)) (partition 2 1 (cons 0 (conj (vec %) 0)))) [1]) (dec n)))))
+            (nth
+              (iterate #(map (fn [[a b]] (+ a b)) (partition 2 1 (cons 0 (conj (vec %) 0)))) [1]) (dec n)))))
 
 (comment
   "A solution using the wikipedia approach for calculating a row directly
