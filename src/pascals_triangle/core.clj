@@ -7,6 +7,18 @@
 (def __ (fn [n]
           (nth (iterate #(map + `(0 ~@%) `(~@% 0)) [1]) (dec n))))
 
+(comment
+  "A solution using partition"
+  (def __ (fn [n]
+                   (nth
+                     (iterate #(map (fn [[a b]] (+ a b)) (partition 2 1 (cons 0 (conj (vec %) 0)))) [1]) (dec n)))))
+
+(comment
+  "A solution using the wikipedia approach for calculating a row directly
+  https://en.wikipedia.org/wiki/Pascal%27s_triangle#Calculating_a_row_or_diagonal_by_itself"
+  (def __ (fn [n] (let [fracs (map #(/ (- n %) %) (range 1 n))]
+                    (reduce (fn [accum item] (conj accum (int (* (last accum) item)))) [1] fracs)))))
+
 (deftest tests
   (is (= (__ 1) [1]))
   (is (= (map __ (range 1 6))
