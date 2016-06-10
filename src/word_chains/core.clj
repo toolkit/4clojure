@@ -14,7 +14,7 @@
 ;;      |                           |
 ;;       ----------------------------
 
-(def __ (fn [_] false))
+(def __ (fn [] false))
 
 (defn lev [s t]
   (let [mlev
@@ -32,12 +32,22 @@
                         (+ cost (mem mem (butlast s) (butlast t))))))))]
     (mlev mlev s t)))
 
-(defn edges [s]
-  (into #{} (for [x s y s :when (not= x y)] {:x x :y y :lev (lev x y)})))
 
-(edges #{"hat" "coat" "dog" "cat" "oat" "cot" "hot" "hog"})
+(defn exists
+  ([s] (not (nil? (some #(exists s %) s))))
+  ([s v]
+   (println s v)
+   (cond
+     (nil? v) false
+     (= s #{v}) true
+     :else (some #(exists (disj s v) %) (filter #(= 1 (lev v %)) s)))))
 
-(group-by :lev (edges #{"share" "hares" "shares" "hare" "are"}))
+(exists #{"hat" "coat" "dog" "cat" "oat" "cot" "hot" "hog"})
+(exists #{"cot" "hot" "bat" "fat"})
+(exists #{"to" "top" "stop" "tops" "toss"})
+(exists #{"spout" "do" "pot" "pout" "spot" "dot"})
+(exists #{"share" "hares" "shares" "hare" "are"})
+(exists #{"share" "hares" "hare" "are"})
 
 (deftest tests
   (is (true? (__ #{"hat" "coat" "dog" "cat" "oat" "cot" "hot" "hog"})))
