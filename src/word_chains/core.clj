@@ -13,6 +13,10 @@
 ;;    share -- shares -- hares -- hare -- are
 ;;      |                           |
 ;;       ----------------------------
+;;
+;;
+;; Uses solution proposed by Bellman, Held, and Karp
+;; https://en.wikipedia.org/wiki/Hamiltonian_path_problem
 
 (def __ (fn [s]
           (let [mlev (memoize
@@ -31,7 +35,6 @@
                 exists (fn exists
                          ([s] (not (nil? (some #(exists s %) s))))
                          ([s v]
-                          (println s v)
                           (cond
                             (nil? v) false
                             (= s #{v}) true
