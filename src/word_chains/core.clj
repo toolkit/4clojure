@@ -14,40 +14,29 @@
 ;;      |                           |
 ;;       ----------------------------
 
-(def __ (fn [] false))
-
-(defn lev [s t]
-  (let [mlev
-        (memoize
-          (fn [mem s t]
-            (let [slen (count s)
-                  tlen (count t)
-                  cost (if (= (last s) (last t)) 0 1)]
-              (cond
-                (zero? slen) tlen
-                (zero? tlen) slen
-                :else (min
-                        (+ 1 (mem mem (butlast s) t))
-                        (+ 1 (mem mem s (butlast t)))
-                        (+ cost (mem mem (butlast s) (butlast t))))))))]
-    (mlev mlev s t)))
-
-
-(defn exists
-  ([s] (not (nil? (some #(exists s %) s))))
-  ([s v]
-   (println s v)
-   (cond
-     (nil? v) false
-     (= s #{v}) true
-     :else (some #(exists (disj s v) %) (filter #(= 1 (lev v %)) s)))))
-
-(exists #{"hat" "coat" "dog" "cat" "oat" "cot" "hot" "hog"})
-(exists #{"cot" "hot" "bat" "fat"})
-(exists #{"to" "top" "stop" "tops" "toss"})
-(exists #{"spout" "do" "pot" "pout" "spot" "dot"})
-(exists #{"share" "hares" "shares" "hare" "are"})
-(exists #{"share" "hares" "hare" "are"})
+(def __ (fn [s]
+          (let [mlev (memoize
+                       (fn [mem s t]
+                         (let [slen (count s)
+                               tlen (count t)
+                               cost (if (= (last s) (last t)) 0 1)]
+                           (cond
+                             (zero? slen) tlen
+                             (zero? tlen) slen
+                             :else (min
+                                     (+ 1 (mem mem (butlast s) t))
+                                     (+ 1 (mem mem s (butlast t)))
+                                     (+ cost (mem mem (butlast s) (butlast t))))))))
+                lev (partial mlev mlev)
+                exists (fn exists
+                         ([s] (not (nil? (some #(exists s %) s))))
+                         ([s v]
+                          (println s v)
+                          (cond
+                            (nil? v) false
+                            (= s #{v}) true
+                            :else (some #(exists (disj s v) %) (filter #(= 1 (lev v %)) s)))))]
+            (exists s))))
 
 (deftest tests
   (is (true? (__ #{"hat" "coat" "dog" "cat" "oat" "cot" "hot" "hog"})))
