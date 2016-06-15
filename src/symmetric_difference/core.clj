@@ -1,7 +1,7 @@
 (ns  symmetric-difference.core
   (:require [clojure.test :refer :all]))
 
-;; Problem 88 - Symmetrics Difference
+;; Problem 88 - Symmetric Difference
 ;; http://www.4clojure.com/problem/88
 
 (def __ #(set (concat (remove %2 %)
