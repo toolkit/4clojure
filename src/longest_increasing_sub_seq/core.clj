@@ -5,14 +5,12 @@
 ;; http://www.4clojure.com/problem/53
 
 (def __ (fn [c]
-          (let [increasing (fn [p] (every? true? (map = p (iterate inc (first p)))))
-                candidates (for [x (-> c count inc (range 1 -1))
-                                 :let [y (partition x 1 c)
-                                       z (filter increasing y)]
-                                 :when (not-empty z)] z)]
-            (if-let [longest (ffirst candidates)]
-              longest
-              []))))
+          (->> c
+               (map-indexed (fn [i v] [(- i v) v]))
+               (partition-by first)
+               (filter #(> (count %) 1))
+               (reduce (fn [a s] (if (> (count a) (count s)) a s)) [])
+               (map last))))
 
 (deftest tests
   (is (= (__ [1 0 1 2 3 0 4 5]) [0 1 2 3]))
